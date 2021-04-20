@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Required meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Agency</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--Bootstrap Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-end py-3">
+            <button class="btn btn-primary" onclick="showFormContainer()">Agregar nuevo vehículo</button>
+        </div>
+        <div class="card d-none" id="create-user-container">
+            <div class="card-body">
+                <form id="model-form" action="/users" onsubmit="event.preventDefault(), addModel(), user()">
+                    <div class="form-group">
+                      <label for="name">Marca</label>
+                      <input type="text" class="form-control" id="trademark" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Modelo</label>
+                        <input type="text" class="form-control" id="model" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Color</label>
+                        <input type="text" class="form-control" id="color" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Año</label>
+                        <input type="number" class="form-control" id="year" required>
+                      </div>
+                    <div class="form-group">
+                        <label for="name">Precio</label>
+                        <input type="text" class="form-control" id="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Url de imagen</label>
+                        <input type="text" class="form-control" id="image" required>
+                    </div>
+                    <button id="btn-user-form" type="submit"  class="btn btn-primary mt-2">Guardar</button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div id="cars-container" class="row">
+                <!-- <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./JS/functions.js"></script>
+</body>
+</html>
